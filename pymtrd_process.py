@@ -9,27 +9,6 @@ import pymtrd_preprocess as preprocess
 import pymtrd_draw as draw
 
 
-# def write_tiff(outputfile, nrows, ncols, geotrans, projinfo, nodata_value, data):
-#     """
-#     Write tiff image
-#     outputfile, the address of output file
-#     nrows, the rows of output image
-#     ncols, the cols of output image
-#     geotrans, the geotransform of output image
-#     projinfo, the projection of output image
-#     nodata_vale, the invalid data
-#     data, the pixel values of output image 2-dim (rows, cols)
-#     """
-#     driver = gdal.GetDriverByName("GTiff")
-#     ds_out = driver.Create(outputfile, ncols, nrows, 1, gdal.GDT_Float32)
-#     ds_out.SetGeoTransform(geotrans)
-#     ds_out.SetProjection(projinfo)
-#     band_out = ds_out.GetRasterBand(1)
-#     band_out.SetNoDataValue(nodata_value)
-#     band_out.WriteArray(data)
-#     ds_out.FlushCache()
-
-
 def process(df):
     """
     Determine the parameters in the csv file to calculate the corresponding indicators and 
