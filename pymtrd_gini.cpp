@@ -5,6 +5,7 @@ using namespace std;
 
 extern "C"
 {
+	//g++ -o pymtrd_gini.dll -shared -fPIC pymtrd_gini.cpp
 	//g++ -o pymtrd_gini.so -shared -fPIC pymtrd_gini.cpp
 	//Get the number of days in the year according to the input year
 	int get_days_year(int year)
