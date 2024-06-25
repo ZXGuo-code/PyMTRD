@@ -13,7 +13,7 @@ The packages required to run PyMTRD are:
 - matplotlib
 - netCDF4
 - numpy
-- osgeo
+- gdal
 - pandas
 - scipy 
 - xarray
