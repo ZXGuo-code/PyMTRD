@@ -24,9 +24,6 @@ The packages required to run PyMTRD are:
 ```
 
 * Windows: [![mingw](https://img.shields.io/badge/MinGW-w64-3776AB.svg)](https://www.mingw-w64.org/)
-* Linux:
-  ```
-  sudo apt install g++
-  ```
+* Linux: g++ package
 
 
