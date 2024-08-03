@@ -37,6 +37,7 @@ The packages required to run PyMTRD are:
 PyMTRD runs based on the configuration file, which contains the definition of dataset’s structure and the basic information needed by PyMTRD. In Readme_config.md, you will find an explanation of the format of the configuration file, including any required and optional sections, and detailed descriptions of each parameter that can be set in the configuration file, including acceptable values and examples. Besides, we provided  two completed example files (config.csv and config_draw.csv). 
 
 To facilitate usage by different users, we provide two invocation methods.
+
 1、 Directly invoke the relevant code: The example can be attached at pymtrd_example.py.
 
 2、Invoke through graphical user interface (pymtrd_gui.py)
