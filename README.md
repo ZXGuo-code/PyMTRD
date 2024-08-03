@@ -40,7 +40,7 @@ To facilitate usage by different users, we provide two invocation methods.
 
 1、 Directly invoke the relevant code: The example can be attached at pymtrd_example.py.
 
-2、Invoke through graphical user interface (pymtrd_gui.py)
+2、Invoke through the graphical user interface (pymtrd_gui.py)
 
 (1) Select Configuration File: Choose the appropriate configuration file that defines the dataset's structure and the basic information such as the paths for inputs and outputs, the metrics to be calculated and the data to be visualized.
 
