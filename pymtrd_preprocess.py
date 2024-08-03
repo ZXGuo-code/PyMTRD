@@ -1,4 +1,5 @@
 import numpy as np
+from netCDF4 import Dataset
 
 DELTA = 0.000001
 THRESHOLD_INTENSITY = 1000
@@ -111,6 +112,40 @@ def daily_to_monthly_oneyear(data_daily, year, nrows, ncols, nodata_value=-9999)
     return data_monthly
 
 
+def daily_to_monthly_oneyear_parallel(daily_path, name_var, output_path, year, nrows, ncols, nodata_value=-9999):
+    """
+    Convert daily scale data to monthly scale data of a year which is used for parallel computing
+    daily_path: the path of input nc file
+    name_var: the var name of precipitation
+    output_path: the output path of monthly data
+    year: the year of input nc file
+    nrows: rows in the study area
+    ncols: cols in the study area
+    nodata_value: a data which means the result is valueless
+    """
+    try:
+        print(f'Daily to monthly: {year}')
+        ds = Dataset(daily_path)
+        days_in_month = []
+        for i in range(1, 13):
+            days_in_month.append(get_days_month(year, i))
+        cumdays_in_month = np.cumsum(days_in_month)
+        data_monthly = np.zeros((12, nrows, ncols))
+        for mon in range(12):
+            index_start = 0
+            if mon > 0:
+                index_start = cumdays_in_month[mon - 1]
+            index_end = cumdays_in_month[mon]
+            days_monthly = get_days_month(year, mon+1)
+            data_daily = np.zeros((days_monthly, nrows, ncols))
+            data_daily[:, :, :] = np.array(ds.variables[name_var][index_start:index_end, :, :])
+            data_monthly[mon, :, :] = daily_to_monthly_onemonth(
+                data_daily, (index_end - index_start), nrows, ncols, nodata_value)
+        np.save(output_path, data_monthly)
+    except Exception as e:
+        print(f"Error processing year {year}: {e}")
+
+
 def daily_to_monthly(data_daily, start_year, nyears, nrows, ncols, nodata_value=-9999):
     """
     Convert daily scale data to monthly scale data
@@ -132,7 +167,7 @@ def daily_to_monthly(data_daily, start_year, nyears, nrows, ncols, nodata_value=
             index_end += 365
         else:
             index_end += 366
-        print(i)
+        print(f'Daily to monthly: {i}')
         data_monthly[index:index + 12, :, :] = daily_to_monthly_oneyear(
             data_daily[index_start:index_end, :, :], i, nrows, ncols, nodata_value)
         index_start = index_end
