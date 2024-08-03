@@ -1,6 +1,6 @@
-# Format of input csv file
+# Format of configuration file
 
-### input.csv(Data Processing and Drawing)
+### config.csv(Data Processing and Drawing)
 
 Write the following in order
 
@@ -295,7 +295,7 @@ e.g.
 | ------ | ---- | ---- | ---- | ----- | ---- | -------------------------- |
 | draw12 | 1    | 2001 | 2010 | 118.8 | 32.1 | Nanjing_gini_2001_2010.jpg |
 
-### input_draw.csv(Drawing)
+### config_draw.csv(Drawing)
 
 Write the following in order
 
@@ -476,4 +476,3 @@ e.g.
 | ------ | ---- | ---- | ---- | ----- | ---- | -------------------------- |
 | draw12 | 1    | 2001 | 2010 | 118.8 | 32.1 | Nanjing_gini_2001_2010.jpg |
 
-### 
