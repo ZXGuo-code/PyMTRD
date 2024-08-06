@@ -46,7 +46,7 @@ In order to calculate these metrics based on the GUI, users need to follow these
 
 (1)	Select configuration file: Choose the appropriate configuration file that defines the dataset's structure and the basic information such as the paths for inputs and outputs, the metrics to be calculated and the data to be visualized.
 
-(2)	Select processing mode: Choose the processing mode among three optioins: “Calculating metrics”, “Drawing”, and “Calculating metrics and drawing”.
+(2)	Select processing mode: Choose the processing mode among three options: “Calculating metrics”, “Drawing”, and “Calculating metrics and drawing”.
 
 (3)	Choose whether to use parallel computing: If parallel computing is selected, users need to input the number of processes. This feature enhances computational efficiency, especially when working with large datasets.
 
