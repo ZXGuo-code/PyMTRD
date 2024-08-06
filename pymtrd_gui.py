@@ -33,10 +33,10 @@ def run_program():
         messagebox.showwarning("Input Error", "Please enter a valid number for thread count")
         return
 
-    if (option == "Calculating the metrics of temporal rainfall distribution" or
-            option == "Calculating the metrics of temporal rainfall distribution & Drawing"):
+    if (option == "Calculating metrics" or
+            option == "Calculating metrics and Drawing"):
         bool_draw = 1
-        if option == "Calculating the metrics of temporal rainfall distribution":
+        if option == "Calculating metrics":
             bool_draw = 0
         if use_parallel:
             command = (f'python -c "import pymtrd_process as pp; pp.process_parallel(\'{configuration_file}\', '
@@ -93,15 +93,15 @@ root = tk.Tk()
 root.title("PyMTRD")
 # input configuration file
 ttk.Label(root, text="Select Configuration File:").grid(row=0, column=0, padx=10, pady=10, sticky="w")
-file_entry = ttk.Entry(root, width=55)
+file_entry = ttk.Entry(root, width=43)
 file_entry.grid(row=0, column=1, padx=10, pady=10)
 ttk.Button(root, text="Browse", command=select_csv_file).grid(row=0, column=2, padx=10, pady=10)
 # data processing and drawing or drawing
 ttk.Label(root, text="Select Processing Mode:").grid(row=1, column=0, padx=10, pady=10, sticky="w")
 option_var = tk.StringVar()
 option_menu = ttk.Combobox(root, textvariable=option_var, values=[
-    "Calculating the metrics of temporal rainfall distribution", "Drawing",
-    "Calculating the metrics of temporal rainfall distribution & Drawing"], width=55)
+    "Calculating metrics", "Drawing",
+    "Calculating metrics and Drawing"], width=40)
 option_menu.grid(row=1, column=1, padx=10, pady=10)
 option_menu.current(0)
 option_var.trace("w", update_parallel_option)
