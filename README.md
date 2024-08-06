@@ -42,12 +42,14 @@ To facilitate usage by different users, we provide two invocation methods.
 
 2、Invoke through the graphical user interface (pymtrd_gui.py)
 
-(1) Select Configuration File: Choose the appropriate configuration file that defines the dataset's structure and the basic information such as the paths for inputs and outputs, the metrics to be calculated and the data to be visualized.
+In order to calculate these metrics based on the GUI, users need to follow these steps:
 
-(2) Select Processing Mode: Choose from three modes: Calculating the metrics of temporal rainfall distribution, Drawing and Calculating the metrics of temporal rainfall distribution & Drawing.
+(1)	Select configuration file: Choose the appropriate configuration file that defines the dataset's structure and the basic information such as the paths for inputs and outputs, the metrics to be calculated and the data to be visualized.
 
-(3) Choose Whether to Use Parallel Computing: If parallel computing is selected, users should input the number of processes based on the number of logical cores of the CPU. This feature enhances computational efficiency, especially when working with large datasets.
+(2)	Select processing mode: Choose the processing mode among three optioins: “Calculating metrics”, “Drawing”, and “Calculating metrics and drawing”.
 
-(4) Run the Program: Click the “Run Program” button to execute the analysis based on the selected options and configuration.
+(3)	Choose whether to use parallel computing: If parallel computing is selected, users need to input the number of processes. This feature enhances computational efficiency, especially when working with large datasets.
+
+(4)	Run the program: Click the “Run program” button to execute the analysis based on the selected options and configuration.
 
 ![Image](https://github.com/ZXGuo-code/Image_Storage/blob/main/PyMTRD_GUI.png?raw=true)
