@@ -53,3 +53,6 @@ In order to calculate these metrics based on the GUI, users need to follow these
 (4)	Run the program: Click the “Run program” button to execute the analysis based on the selected options and configuration.
 
 ![Image](https://github.com/ZXGuo-code/Image_Storage/blob/main/PyMTRD_GUI.png?raw=true)
+
+# Citation
+Guo, Z., Wang, Y., Liu, C., Yang, W., Liu, J., PyMTRD: A Python package for calculating the metrics of temporal rainfall distribution, Environmental Modelling and Software, https:// doi.org/10.1016/j.envsoft.2024.106201.
