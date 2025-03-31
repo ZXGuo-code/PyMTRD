@@ -27,8 +27,8 @@ The packages required to run PyMTRD are:
 - tkinter
 ```
 
-* Windows: [![mingw](https://img.shields.io/badge/MinGW-w64-3776AB.svg)](https://www.mingw-w64.org/)
-* Linux: g++ package
+* Windows: [![mingw](https://img.shields.io/badge/MinGW-w64-3776AB.svg)](https://www.mingw-w64.org/) , and compile pymtrd_gini.dll using: g++ -o pymtrd_gini.dll -shared -fPIC pymtrd_gini.cpp
+* Linux: g++ package, and compile pymtrd_gini.so using: g++ -o pymtrd_gini.so -shared -fPIC pymtrd_gini.cpp
 
 # How to run PyMTRD?
 
